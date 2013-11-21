@@ -8,26 +8,37 @@ Instructions
 
 Currently the execution of this requires command line (terminal) access.  
 
+* Make a local copy of the repo by copying the github URL and from the command line in a directory you wish you make:
+```
+git clone [paste url]      [should only need to do this once, creates local copy of git repo]
+```
+
 * Make sure to have ruby 2.0 installed and the bundler gem.  Check your version of ruby by running `ruby --version`.  To install bundler run `gem install bundler` at the command line.
 
 * Install the dependencies by running
 
 ```
-bundle
+cd os-analysis-example
+sudo gem install bundler
+sudo bundle
 ```
-
+* list run options
+```
+rake -T
+```
 * Run example (will setup the cluster and run the project)
 
 ```
-rake run
+sudo rake run
 ```
 
-* Note the first time you run this you will need to add in your AWS creditials, then run again
+* Note the first time you run this you will need to add in your AWS creditials, then run again.
+* put your AWS credentials in the aws_config.yml file
 
 * Kill running simulations
 
 ```
-rake kill_all
+sudo rake kill_all
 ```
 
 * Delete projects
